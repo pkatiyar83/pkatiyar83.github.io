@@ -64,7 +64,8 @@
     .fn .t { font-family: 'Sora'; font-weight: 600; font-size: 0.74rem; margin-top: 4px; color: var(--navy); }
     .fn .s { font-size: 0.6rem; color: var(--soft); }
     .arrow { display: flex; align-items: center; color: var(--teal); font-weight: 700; padding: 0 4px; }
-    @media (max-width: 680px) { .arrow { display: none; } .flow { gap: 6px; } .fn { min-width: 0; } }
+    @media (max-width: 680px) { .arrow { display: none; } .flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; } .fn { min-width: 0; } }
+    @media (max-width: 380px) { .flow { grid-template-columns: repeat(2, 1fr); } }
     .archtags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
     .archtags span { font-size: 0.68rem; padding: 4px 9px; border-radius: 6px; background: #fff; border: 1px solid var(--line); color: #45525f; }
     .archtags .ai { background: linear-gradient(110deg, rgba(13,148,136,0.12), rgba(37,99,235,0.1)); border-color: rgba(13,148,136,0.4); color: #0c5b53; font-weight: 600; }
