@@ -5,90 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pawon Kumar — CV · Technical Lead / Architect</title>
   <meta name="description" content="Curriculum Vitae of Pawon Kumar — Technical Lead / Architect." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232dd4bf'/%3E%3Cstop offset='1' stop-color='%235b9dff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%230a0f16'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='48' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EPK%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230d9488'/%3E%3Cstop offset='1' stop-color='%232563eb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%230f1b2d'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='48' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EPK%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    :root { --accent: #0d9488; --accent-2: #2563eb; --accent-3: #d97706; --ink: #1b2430; --muted: #5a6675; --line: #e5e9f0; }
+    :root {
+      --navy: #0f1b2d; --ink: #1c2733; --muted: #5d6b7a; --soft: #8a96a3;
+      --teal: #0d9488; --blue: #2563eb; --amber: #c2740a;
+      --line: #e3e8ef; --side: #f5f7fb; --paper: #ffffff;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', system-ui, sans-serif; background: #0a0f16; color: var(--ink); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #eef1f6; color: var(--ink); line-height: 1.5; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
 
-    .aurora { position: fixed; inset: 0; z-index: 0; overflow: hidden; }
-    .blob { position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.45; }
-    .b1 { width: 45vw; height: 45vw; background: #2dd4bf; top: -10%; left: -8%; }
-    .b2 { width: 40vw; height: 40vw; background: #5b9dff; top: 5%; right: -10%; }
-    .b3 { width: 40vw; height: 40vw; background: #f0a868; bottom: -16%; left: 22%; opacity: 0.2; }
+    .controls { position: fixed; top: 18px; right: 18px; z-index: 100; display: flex; gap: 10px; }
+    .ctl { display: inline-flex; align-items: center; gap: 8px; padding: 9px 15px; border-radius: 11px; font-size: 0.85rem; font-weight: 600; cursor: pointer; color: var(--navy); background: #fff; border: 1px solid var(--line); box-shadow: 0 4px 14px rgba(15,27,45,0.12); transition: transform 0.15s; }
+    .ctl:hover { transform: translateY(-2px); }
+    .ctl.primary { background: linear-gradient(110deg, var(--teal), var(--blue)); color: #fff; border: none; }
 
-    .controls { position: fixed; top: 18px; right: 18px; z-index: 100; display: flex; gap: 10px; align-items: center; }
-    .ctl { display: inline-flex; align-items: center; gap: 8px; padding: 9px 15px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; cursor: pointer; color: #fff; background: rgba(255,255,255,0.1); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.18); transition: transform 0.15s, border-color 0.2s; }
-    .ctl:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.4); }
-    .ctl.primary { background: linear-gradient(110deg, #2dd4bf, #5b9dff); border: none; color: #06231f; }
+    .page { max-width: 880px; margin: 40px auto; background: var(--paper); box-shadow: 0 24px 70px rgba(15,27,45,0.22); border-radius: 8px; overflow: hidden; }
 
-    .paper { position: relative; z-index: 2; max-width: 880px; margin: 64px auto; background: #fff; border-radius: 14px; box-shadow: 0 30px 80px rgba(0,0,0,0.5); overflow: hidden; }
-    .head { padding: 38px 48px 28px; background: linear-gradient(135deg, #0c1320, #142033); color: #fff; position: relative; }
-    .head::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: linear-gradient(90deg, #2dd4bf, #5b9dff, #f0a868); }
-    .head h1 { font-family: 'Sora'; font-weight: 700; font-size: 2.3rem; letter-spacing: -0.02em; }
-    .head .role { color: #9fe5db; font-weight: 600; font-size: 1.05rem; margin-top: 2px; }
-    .contact { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.83rem; color: #c3cde0; }
-    .contact a:hover { color: #fff; }
+    /* header */
+    .top { background: var(--navy); color: #fff; padding: 36px 44px 30px; position: relative; }
+    .top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: linear-gradient(90deg, var(--teal), var(--blue) 60%, var(--amber)); }
+    .top h1 { font-family: 'Sora'; font-weight: 700; font-size: 2.2rem; letter-spacing: -0.02em; }
+    .top .role { font-family: 'Sora'; color: #8fe3d8; font-weight: 600; font-size: 1.02rem; margin-top: 3px; letter-spacing: 0.01em; }
+    .top .contact { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 7px 20px; font-size: 0.82rem; color: #b9c4d4; }
+    .top .contact a:hover { color: #fff; }
 
-    .mrow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-bottom: 1px solid var(--line); }
-    .mrow .m { padding: 16px 12px; text-align: center; border-right: 1px solid var(--line); }
-    .mrow .m:last-child { border-right: none; }
-    .mrow .m .n { font-family: 'Sora'; font-weight: 700; font-size: 1.4rem; color: var(--accent-2); }
-    .mrow .m .l { font-size: 0.68rem; color: var(--muted); margin-top: 3px; }
-    @media (max-width: 620px) { .mrow { grid-template-columns: repeat(2, 1fr); } }
+    /* two-column body */
+    .cols { display: grid; grid-template-columns: 1.7fr 1fr; }
+    @media (max-width: 740px) { .cols { grid-template-columns: 1fr; } }
+    .main { padding: 30px 18px 36px 44px; }
+    .side { padding: 30px 44px 36px 26px; background: var(--side); border-left: 1px solid var(--line); }
+    @media (max-width: 740px) { .side { border-left: none; border-top: 1px solid var(--line); padding-left: 44px; } }
 
-    .body { padding: 30px 48px 44px; }
-    .sec { margin-bottom: 24px; }
-    .sec:last-child { margin-bottom: 0; }
-    .sec h2 { font-family: 'Sora'; font-size: 0.92rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); padding-bottom: 7px; border-bottom: 2px solid var(--line); margin-bottom: 13px; }
-    .summary { font-size: 0.95rem; color: #2c3544; }
+    h2 { font-family: 'Sora'; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.13em; color: var(--teal); margin-bottom: 12px; display: flex; align-items: center; gap: 9px; }
+    h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+    .block { margin-bottom: 24px; }
+    .block:last-child { margin-bottom: 0; }
 
-    .skillrow { display: grid; grid-template-columns: 190px 1fr; gap: 6px 18px; padding: 5px 0; font-size: 0.88rem; align-items: baseline; }
-    .skillrow .k { font-weight: 600; }
-    .skillrow .v { color: var(--muted); }
-    .skillrow.hl .k { color: var(--accent-3); }
-    @media (max-width: 620px) { .skillrow { grid-template-columns: 1fr; gap: 2px; } }
+    .summary { font-size: 0.9rem; color: #36424f; }
 
     .job { margin-bottom: 16px; }
     .job:last-child { margin-bottom: 0; }
-    .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-    .job-head .t { font-family: 'Sora'; font-weight: 600; font-size: 1rem; }
-    .job-head .when { font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; color: var(--muted); white-space: nowrap; }
-    .job .co { font-size: 0.85rem; color: var(--accent-2); font-weight: 600; margin: 3px 0 7px; }
-    .job ul { list-style: none; }
-    .job li { position: relative; padding-left: 18px; margin-bottom: 4px; font-size: 0.87rem; color: #38414f; }
-    .job li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+    .job .t { font-family: 'Sora'; font-weight: 600; font-size: 0.98rem; color: var(--navy); }
+    .job .meta { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+    .job .co { font-size: 0.84rem; color: var(--blue); font-weight: 600; }
+    .job .when { font-size: 0.74rem; color: var(--soft); font-weight: 500; white-space: nowrap; }
+    .job ul { list-style: none; margin-top: 6px; }
+    .job li { position: relative; padding-left: 16px; margin-bottom: 4px; font-size: 0.85rem; color: #3a4654; }
+    .job li::before { content: ""; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--teal); }
 
-    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-    @media (max-width: 620px) { .two { grid-template-columns: 1fr; } }
+    /* sidebar */
+    .skillgroup { margin-bottom: 13px; }
+    .skillgroup .gh { font-size: 0.74rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .skillgroup.hl .gh { color: var(--amber); }
+    .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tags span { font-size: 0.72rem; padding: 4px 9px; border-radius: 6px; background: #fff; border: 1px solid var(--line); color: #45525f; }
+    .ach { margin-bottom: 11px; }
+    .ach .big { font-family: 'Sora'; font-weight: 700; font-size: 0.96rem; color: var(--blue); }
+    .ach .d { font-size: 0.76rem; color: var(--muted); margin-top: 1px; }
+    .edu .deg { font-family: 'Sora'; font-weight: 600; font-size: 0.86rem; color: var(--navy); }
+    .edu .uni { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
 
     @media print {
-      @page { size: A4; margin: 12mm; }
-      body { background: #fff !important; }
-      .aurora, .controls { display: none !important; }
-      .paper { margin: 0; max-width: 100%; box-shadow: none; border-radius: 0; }
-      .head { background: #0c1320 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-      .head, .head * { color: #fff !important; }
-      .mrow .m .n { -webkit-text-fill-color: #2563eb; }
-      .sec, .job { page-break-inside: avoid; }
-      a { color: #1b2430 !important; }
+      @page { size: A4; margin: 0; }
+      body { background: #fff; }
+      .controls { display: none !important; }
+      .page { margin: 0; max-width: 100%; box-shadow: none; border-radius: 0; }
+      .top { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .side { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .job, .block { page-break-inside: avoid; }
     }
   </style>
 </head>
 <body>
-  <div class="aurora"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
-
   <div class="controls">
     <a class="ctl" href="index.html">← Portfolio</a>
     <button class="ctl primary" onclick="window.print()">⤓ Save as PDF</button>
   </div>
 
-  <div class="paper">
-    <div class="head">
+  <div class="page">
+    <div class="top">
       <h1>Pawon Kumar</h1>
       <div class="role">Technical Lead / Architect</div>
       <div class="contact">
@@ -99,110 +99,118 @@
       </div>
     </div>
 
-    <div class="mrow">
-      <div class="m"><div class="n">19+</div><div class="l">Years experience</div></div>
-      <div class="m"><div class="n">8×</div><div class="l">Throughput gain</div></div>
-      <div class="m"><div class="n">30%+</div><div class="l">Cloud cost cut</div></div>
-      <div class="m"><div class="n">50K+</div><div class="l">Concurrent users</div></div>
-    </div>
-
-    <div class="body">
-      <div class="sec">
-        <h2>Professional Summary</h2>
-        <p class="summary">Technical Lead / Architect with <strong>19+ years</strong> architecting, leading and delivering cloud-native transformation across distributed, high-scale systems. Currently owning platform-wide architecture for a multi-channel <strong>Customer Communications Management (CCM)</strong> platform — resilient design, event-driven architectures (Kafka Streams, Spring Kafka), Zero-Trust security, and a production <strong>Agentic AI platform (RAG, MCP)</strong>. A strategic partner to business and technology leadership, translating complex requirements into scalable, production-grade platforms built on Domain-Driven Design, while building and mentoring high-performing engineering teams.</p>
-      </div>
-
-      <div class="sec">
-        <h2>Core Architecture &amp; Technical Skills</h2>
-        <div class="skillrow"><div class="k">Architecture</div><div class="v">Solution &amp; Enterprise Architecture, Microservices, DDD, Event-Driven Architecture, Scalability, Zero-Trust Security</div></div>
-        <div class="skillrow"><div class="k">Messaging &amp; Streaming</div><div class="v">Kafka Streams, Spring Kafka, Event Sourcing, Pub-Sub, RabbitMQ</div></div>
-        <div class="skillrow"><div class="k">Backend</div><div class="v">Java 17/21, Spring Boot 3, Spring WebFlux/Reactor, Spring Cloud, Python, FastAPI, REST, gRPC</div></div>
-        <div class="skillrow"><div class="k">Data &amp; Cloud</div><div class="v">MongoDB, Redis, AWS (EKS, Lambda), Kubernetes, Terraform</div></div>
-        <div class="skillrow"><div class="k">DevSecOps</div><div class="v">AI-integrated CI/CD, GitLab CI, Nginx, Snyk, Prometheus, Grafana</div></div>
-        <div class="skillrow hl"><div class="k">AI &amp; Agentic</div><div class="v">RAG (Retrieval-Augmented Generation), Agentic AI Workflows, MCP Server Integration</div></div>
-        <div class="skillrow"><div class="k">Governance &amp; Leadership</div><div class="v">Architecture Review &amp; Governance, Release Governance, Roadmap Ownership, Team Mentoring</div></div>
-      </div>
-
-      <div class="sec">
-        <h2>Experience</h2>
-
-        <div class="job">
-          <div class="job-head"><div class="t">Technical Lead / Architect</div><div class="when">FCI CCM · Noida · 2024 — Present</div></div>
-          <div class="co">FCI CCM</div>
-          <ul>
-            <li>Lead architect for the VARTA CCM multi-channel platform on Spring Boot, MongoDB, Kafka &amp; Kubernetes — chairing architecture governance and directing cross-functional teams.</li>
-            <li>Delivered an <strong>8× throughput</strong> gain on a PDF-generation service via a fully reactive pipeline and a tuned Spring WebClient connection pool (600 connections, custom eviction/retry), confirmed in UAT.</li>
-            <li>Re-architected the Kafka consumer pipeline with @RetryableTopic, exponential backoff and a Dead Letter Topic persisted to MongoDB with a replay/archive API.</li>
-            <li>Designed a Zero-Trust architecture (Istio, OAuth2/JWT + mTLS, PII encryption, Kafka SSL/SASL, Vault) aligned to GDPR/DPDP/ISO 27001.</li>
-            <li>Architected a production RAG + Agentic AI platform — Redis vector search, ReAct reasoning loop, and an MCP server with OpenAI integration.</li>
-          </ul>
+    <div class="cols">
+      <!-- main column -->
+      <div class="main">
+        <div class="block">
+          <h2>Professional Summary</h2>
+          <p class="summary">Technical Lead / Architect with <strong>19+ years</strong> architecting, leading and delivering cloud-native transformation across distributed, high-scale systems. Currently owning platform-wide architecture for a multi-channel Customer Communications Management (CCM) platform — resilient design, event-driven architectures (Kafka Streams, Spring Kafka), Zero-Trust security, and a production Agentic AI platform (RAG, MCP). A strategic partner to business and technology leadership, translating complex requirements into scalable, production-grade platforms built on Domain-Driven Design, while building and mentoring high-performing engineering teams.</p>
         </div>
 
-        <div class="job">
-          <div class="job-head"><div class="t">Lead Software Development</div><div class="when">Entain India · Hyderabad · 2021 — 2024</div></div>
-          <div class="co">Entain India</div>
-          <ul>
-            <li>Architected a real-time gaming ecosystem on EDA &amp; Spring Kafka sustaining <strong>50K+ concurrent users</strong> with zero critical incidents.</li>
-            <li>Built event-based fraud detection processing <strong>10K+ events/sec</strong>; multi-region deployment on EKS + Terraform.</li>
-            <li>Applied DDD to decompose cross-domain microservices, reducing inter-service complexity and accelerating delivery.</li>
-          </ul>
-        </div>
+        <div class="block">
+          <h2>Experience</h2>
 
-        <div class="job">
-          <div class="job-head"><div class="t">Principal Consultant</div><div class="when">Genpact · Noida · 2018 — 2021</div></div>
-          <div class="co">Genpact</div>
-          <ul>
-            <li>Drove enterprise architectural modernisation for financial-services clients on AWS, cutting infra cost <strong>30%+</strong> via auto-scaling microservices.</li>
-            <li>Built AI-integrated CI/CD pipelines and event-driven capital-markets workflows; high-performance discovery with Apache Solr.</li>
-          </ul>
-        </div>
+          <div class="job">
+            <div class="t">Technical Lead / Architect</div>
+            <div class="meta"><div class="co">FCI CCM · Noida</div><div class="when">Feb 2024 — Present</div></div>
+            <ul>
+              <li>Lead architect for the VARTA CCM multi-channel platform (Spring Boot, MongoDB, Kafka, Kubernetes); chair architecture governance and direct cross-functional teams.</li>
+              <li>Delivered an <strong>8× throughput</strong> gain on a PDF-generation service via a fully reactive pipeline and a tuned Spring WebClient connection pool — confirmed in UAT.</li>
+              <li>Re-architected the Kafka consumer pipeline with @RetryableTopic, exponential backoff and a Dead Letter Topic persisted to MongoDB with a replay/archive API.</li>
+              <li>Designed a Zero-Trust architecture (Istio, OAuth2/JWT + mTLS, PII encryption, Kafka SSL/SASL, Vault) aligned to GDPR / DPDP / ISO 27001.</li>
+              <li>Architected a production RAG + Agentic AI platform — Redis vector search, ReAct reasoning loop, MCP server with OpenAI integration.</li>
+            </ul>
+          </div>
 
-        <div class="job">
-          <div class="job-head"><div class="t">Technical Lead</div><div class="when">DXC Technology · Noida · 2017 — 2018</div></div>
-          <div class="co">DXC Technology</div>
-          <ul>
-            <li>Architected Spring microservices for insurance risk assessment; custom Spring Boot starters for logging, security and exception handling.</li>
-            <li>Led migration of on-prem Java apps to Docker/OpenShift, laying the foundation for cloud-native operations.</li>
-          </ul>
-        </div>
+          <div class="job">
+            <div class="t">Lead Software Development</div>
+            <div class="meta"><div class="co">Entain India · Hyderabad</div><div class="when">Nov 2021 — Feb 2024</div></div>
+            <ul>
+              <li>Architected a real-time gaming ecosystem on EDA &amp; Spring Kafka sustaining <strong>50K+ concurrent users</strong> with zero critical incidents.</li>
+              <li>Built event-based fraud detection processing <strong>10K+ events/sec</strong>; multi-region deployment on AWS EKS with Terraform.</li>
+              <li>Applied Domain-Driven Design to decompose cross-domain microservices, accelerating feature delivery.</li>
+            </ul>
+          </div>
 
-        <div class="job">
-          <div class="job-head"><div class="t">Technical Lead</div><div class="when">Netlink / Xeeva · Noida · 2013 — 2016</div></div>
-          <div class="co">Netlink / Xeeva, Inc.</div>
-          <ul>
-            <li>Led technical strategy for B2B e-procurement &amp; multi-tenant SaaS — containerisation, multi-tenant data isolation, centralised config with Spring Cloud.</li>
-          </ul>
-        </div>
+          <div class="job">
+            <div class="t">Principal Consultant</div>
+            <div class="meta"><div class="co">Genpact · Noida</div><div class="when">Oct 2018 — Nov 2021</div></div>
+            <ul>
+              <li>Drove enterprise architectural modernisation for financial-services clients on AWS, cutting infrastructure cost <strong>30%+</strong> via auto-scaling microservices.</li>
+              <li>Built AI-integrated CI/CD pipelines and event-driven capital-markets workflows; high-performance discovery with Apache Solr.</li>
+            </ul>
+          </div>
 
-        <div class="job">
-          <div class="job-head"><div class="t">Senior Software Engineer</div><div class="when">iYogi · Gurgaon · 2012 — 2013</div></div>
-          <div class="co">iYogi Inc.</div>
-          <ul>
-            <li>Streamlined payment gateways with 3D-Secure &amp; fraud prevention; refactored SOAP integrations to REST, improving mobile performance.</li>
-          </ul>
-        </div>
+          <div class="job">
+            <div class="t">Technical Lead</div>
+            <div class="meta"><div class="co">DXC Technology · Noida</div><div class="when">Jan 2017 — Oct 2018</div></div>
+            <ul>
+              <li>Architected Spring microservices for insurance risk assessment; built custom Spring Boot starters standardising logging, security and exception handling.</li>
+              <li>Led migration of on-premises Java applications to Docker / OpenShift.</li>
+            </ul>
+          </div>
 
-        <div class="job">
-          <div class="job-head"><div class="t">Senior Software Engineer</div><div class="when">Trilasoft · Noida · 2010 — 2012</div></div>
-          <div class="co">Trilasoft Solution</div>
-          <ul>
-            <li>Built a logistics platform — real-time consignment tracking, barcode warehouse management, customer portal with L2 caching.</li>
-          </ul>
-        </div>
+          <div class="job">
+            <div class="t">Technical Lead</div>
+            <div class="meta"><div class="co">Netlink / Xeeva, Inc. · Noida</div><div class="when">Jul 2013 — Dec 2016</div></div>
+            <ul>
+              <li>Led technical strategy for B2B e-procurement &amp; multi-tenant SaaS — containerisation, multi-tenant data isolation, centralised config with Spring Cloud.</li>
+            </ul>
+          </div>
 
-        <div class="job">
-          <div class="job-head"><div class="t">Java Developer</div><div class="when">Ipseity Group · Noida · 2006 — 2010</div></div>
-          <div class="co">Ipseity Group</div>
-          <ul>
-            <li>Developed secure smart-card identity systems and PKI authentication; automated audit trails enabling ISO 27001 certification.</li>
-          </ul>
+          <div class="job">
+            <div class="t">Senior Software Engineer</div>
+            <div class="meta"><div class="co">iYogi Inc. · Gurgaon</div><div class="when">Jul 2012 — Jul 2013</div></div>
+            <ul>
+              <li>Streamlined payment gateways with 3D-Secure &amp; fraud-prevention APIs; refactored SOAP integrations to REST, improving mobile performance.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="t">Senior Software Engineer</div>
+            <div class="meta"><div class="co">Trilasoft Solution · Noida</div><div class="when">Aug 2010 — Apr 2012</div></div>
+            <ul>
+              <li>Built a logistics platform — real-time consignment tracking, barcode warehouse management, and a customer portal with L2 caching.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="t">Java Developer</div>
+            <div class="meta"><div class="co">Ipseity Group · Noida</div><div class="when">Dec 2006 — Jul 2010</div></div>
+            <ul>
+              <li>Developed secure smart-card identity systems and PKI authentication; automated audit trails enabling ISO 27001 certification.</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="sec">
-        <h2>Education</h2>
-        <div class="job-head"><div class="t">B.Tech — Computer Science &amp; Engineering</div><div class="when">2006</div></div>
-        <div class="co">UP Technical University, India</div>
+      <!-- sidebar -->
+      <div class="side">
+        <div class="block">
+          <h2>Core Competencies</h2>
+          <div class="skillgroup"><div class="gh">Architecture</div><div class="tags"><span>Solution &amp; Enterprise</span><span>Microservices</span><span>DDD</span><span>Event-Driven</span><span>Scalability</span></div></div>
+          <div class="skillgroup"><div class="gh">Messaging</div><div class="tags"><span>Kafka Streams</span><span>Spring Kafka</span><span>Event Sourcing</span><span>RabbitMQ</span></div></div>
+          <div class="skillgroup"><div class="gh">Backend</div><div class="tags"><span>Java 17/21</span><span>Spring Boot 3</span><span>WebFlux</span><span>Python</span><span>FastAPI</span><span>gRPC</span></div></div>
+          <div class="skillgroup"><div class="gh">Data &amp; Cloud</div><div class="tags"><span>MongoDB</span><span>Redis</span><span>AWS EKS</span><span>Kubernetes</span><span>Terraform</span></div></div>
+          <div class="skillgroup"><div class="gh">DevSecOps</div><div class="tags"><span>GitLab CI</span><span>Snyk</span><span>Prometheus</span><span>Grafana</span><span>Vault</span></div></div>
+          <div class="skillgroup hl"><div class="gh">AI &amp; Agentic</div><div class="tags"><span>RAG</span><span>Agentic Workflows</span><span>MCP Server</span></div></div>
+          <div class="skillgroup"><div class="gh">Leadership</div><div class="tags"><span>Architecture Governance</span><span>Roadmap Ownership</span><span>Mentoring</span></div></div>
+        </div>
+
+        <div class="block">
+          <h2>Key Achievements</h2>
+          <div class="ach"><div class="big">8× throughput</div><div class="d">Reactive PDF-generation pipeline (UAT-confirmed)</div></div>
+          <div class="ach"><div class="big">30%+ cost cut</div><div class="d">Monolith → auto-scaling AWS microservices</div></div>
+          <div class="ach"><div class="big">10K+ events/sec</div><div class="d">Real-time fraud detection, zero downtime</div></div>
+          <div class="ach"><div class="big">50K+ users</div><div class="d">Event-driven ecosystem, zero critical incidents</div></div>
+          <div class="ach"><div class="big">40% faster</div><div class="d">Deployment cycle via Kubernetes containerisation</div></div>
+        </div>
+
+        <div class="block edu">
+          <h2>Education</h2>
+          <div class="deg">B.Tech — Computer Science &amp; Engineering</div>
+          <div class="uni">UP Technical University, India · 2006</div>
+        </div>
       </div>
     </div>
   </div>
